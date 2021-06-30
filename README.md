@@ -7,3 +7,4 @@ being read/written on average, and etc.
 - Have the progress ('-') allow the bar to work with data being passed in (cat)
 - Reading and writing with std(in/out/err)
 - Make the script work similar to how pv works (end goal)
+- Rewrite the whole progress bar code so nothing is made by anyone else
