@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import sys
+import time
+
+# https://stackoverflow.com/questions/3160699/python-progress-bar
+
+width = 20
+
+sys.stderr.write(f'{" " * width}')
+sys.stderr.flush()
+sys.stderr.write('\b' * (width + 1) + '\r')
+sys.stderr.write('[')
+sys.stderr.flush()
+
+# '\r' is used to return the cursor back to the start
+# if not, then the cursor will stay at the end
+
+for i in range(width):
+    time.sleep(0.1)
+    sys.stderr.write('-')
+    sys.stderr.flush()
+
+sys.stderr.write(']\n')
